@@ -4,6 +4,7 @@ pipelines:
       - name: S_NC_PS_001_001
         type: PowerShell
         configuration:
+          nodePool: win_2019
           affinityGroup: S_NC_PS_001
           environmentVariables:
             dockerimage: mcr.microsoft.com/windows/nanoserver:1809-amd64
@@ -20,6 +21,7 @@ pipelines:
       - name: S_NC_PS_001_002
         type: PowerShell
         configuration:
+          nodePool: win_2019
           affinityGroup: S_NC_PS_001
           inputSteps:
             - name: S_NC_PS_001_001

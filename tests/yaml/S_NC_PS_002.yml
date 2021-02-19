@@ -5,6 +5,7 @@ pipelines:
       - name: S_NC_PS_002_001
         type: PowerShell
         configuration:
+          nodePool: win_2019
           environmentVariables:
             dockerimage: mcr.microsoft.com/windows/nanoserver:1809-amd64
         execution:
@@ -20,6 +21,7 @@ pipelines:
       - name: S_NC_PS_002_002
         type: PowerShell
         configuration:
+          nodePool: win_2019
           inputSteps:
             - name: S_NC_PS_002_001
         execution:
