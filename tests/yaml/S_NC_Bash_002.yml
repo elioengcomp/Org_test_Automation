@@ -4,8 +4,6 @@ pipelines:
     steps:
       - name: S_NC_Bash_002_001
         type: Bash
-        configuration:
-          nodePool: S_NC_Bash_002_NodePool
         execution:
           onExecute:
             # Generate random container name
@@ -19,7 +17,6 @@ pipelines:
       - name: S_NC_Bash_002_002
         type: Bash
         configuration:
-          nodePool: S_NC_Bash_002_NodePool
           inputSteps:
             - name: S_NC_Bash_002_001
         execution:
