@@ -1,9 +1,11 @@
 pipelines:
-  # This test is only effective if executed on a node poll with a single static node to assure the steps will run on the same node
+  # This test is only effective if the steps run on the same node
   - name: S_NC_Bash_002
     steps:
       - name: S_NC_Bash_002_001
         type: Bash
+        configuration:
+          nodePool: S_NC_Bash_002_NodePool
         execution:
           onExecute:
             # Generate random container name
@@ -17,6 +19,7 @@ pipelines:
       - name: S_NC_Bash_002_002
         type: Bash
         configuration:
+          nodePool: S_NC_Bash_002_NodePool
           inputSteps:
             - name: S_NC_Bash_002_001
         execution:
