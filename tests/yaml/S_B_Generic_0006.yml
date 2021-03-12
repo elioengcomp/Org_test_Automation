@@ -1,13 +1,11 @@
 pipelines:
-  - name: P_EnvVar_0001
+  - name: S_B_Generic_0006
     steps:
-      - name: P_EnvVar_0001_1
-        type: Bash
+      - name: S_B_Generic_0006_1
+        type: test/PrintEnvVar
         configuration:
           environmentVariables:
             step_env_var:
               description: step description
               default: step_default_value
-        execution:
-          onExecute:
-            - echo $step_env_var
+          envVarName:  step_env_var

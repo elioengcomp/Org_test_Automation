@@ -1,11 +1,10 @@
 pipelines:
-  - name: P_EnvVar_0006
+  - name: S_B_Generic_0008
     steps:
-      - name: P_EnvVar_0006_1
+      - name: S_B_Generic_0008_1
         type: test/PrintEnvVar
         configuration:
           environmentVariables:
             step_env_var:
-              description: step description
-              default: step_default_value
+              default: default_value
           envVarName:  step_env_var

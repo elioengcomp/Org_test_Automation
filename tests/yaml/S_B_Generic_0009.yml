@@ -1,7 +1,7 @@
 pipelines:
-  - name: P_EnvVar_0007
+  - name: S_B_Generic_0009
     steps:
-      - name: P_EnvVar_0007_1
+      - name: S_B_Generic_0009_1
         type: test/PrintEnvVar
         configuration:
           environmentVariables:
@@ -10,4 +10,5 @@ pipelines:
               values:
                 - value1
                 - value2
+              allowCustom: true
           envVarName:  step_env_var

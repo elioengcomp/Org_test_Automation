@@ -1,13 +1,16 @@
 pipelines:
-  - name: P_EnvVar_0021
+  - name: S_B_Generic_0004
     steps:
-      - name: P_EnvVar_0021_1
+      - name: S_B_Generic_0004_1
         type: Bash
         configuration:
           environmentVariables:
             step_env_var:
               default: value1
-              values: value1,value2
+              values:
+                - value1
+                - value2
+              allowCustom: true
         execution:
           onExecute:
             - echo $step_env_var
