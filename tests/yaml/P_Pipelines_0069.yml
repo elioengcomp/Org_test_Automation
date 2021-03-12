@@ -1,5 +1,5 @@
 pipelines:
-  - name: P_EnvVar_0014
+  - name: P_Pipelines_0069
     configuration:
       environmentVariables:
         readOnly:
@@ -10,7 +10,7 @@ pipelines:
               - value2
             allowCustom: true
     steps:
-      - name: P_EnvVar_0014_1
+      - name: P_Pipelines_0069_1
         type: Bash
         execution:
           onExecute:

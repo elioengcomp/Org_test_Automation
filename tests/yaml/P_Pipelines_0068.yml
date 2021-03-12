@@ -1,15 +1,14 @@
 pipelines:
-  - name: P_EnvVar_0022
+  - name: P_Pipelines_0068
     configuration:
       environmentVariables:
         readOnly:
           pipe_env_var:
-            values:
-              - value1
-              - value2
+            default: default_value
     steps:
-      - name: P_EnvVar_0022_1
+      - name: P_Pipelines_0068_1
         type: Bash
         execution:
           onExecute:
             - echo $pipe_env_var
+
