@@ -1,0 +1,11 @@
+pipelines:
+  - name: P_EnvVar_0019
+    steps:
+      - name: P_EnvVar_0019_1
+        type: Bash
+        configuration:
+          environmentVariables:
+            step_env_var:
+        execution:
+          onExecute:
+            - echo $step_env_var
