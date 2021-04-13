@@ -2,14 +2,14 @@ pipelines:
   - name: P_Logs_0001
     steps:
       - name: P_Logs_0001_001
-      type: Bash
-      execution:
-        onStart:
-          - echo "Starting"
-        onExecute:
-          # Testing stdout
-          - echo "Stdout content"
-          # Testing stderr
-          - echo "Stderr content" >> /dev/stderr
-        onComplete:
-          - echo "Done"
+        type: Bash
+        execution:
+          onStart:
+            - echo "Starting"
+          onExecute:
+            # Testing stdout
+            - echo "Stdout content"
+            # Testing stderr
+            - echo "Stderr content" >> /dev/stderr
+          onComplete:
+            - echo "Done"
