@@ -1,0 +1,13 @@
+pipelines:
+  - name: P_Logs_0002
+    steps:
+      - name: P_Logs_0002_001
+        type: Bash
+        execution:
+          onStart:
+            - echo "Starting"
+          onExecute:
+            # Force error
+            - command_not_found
+          onComplete:
+            - echo "Done"
