@@ -8,8 +8,12 @@ pipelines:
             - echo "Starting"
           onExecute:
             # Testing stdout
-            - echo "Stdout content"
+            - echo "Stdout content 1"
+            - echo "Stdout content 2"
+            - echo "Stdout content 3"
             # Testing stderr
-            - echo "Stderr content" >> /dev/stderr
+            - echo "Stderr content 1" >> /dev/stderr
+            - echo "Stderr content 2" >> /dev/stderr
+            - echo "Stderr content 3" >> /dev/stderr
           onComplete:
             - echo "Done"
