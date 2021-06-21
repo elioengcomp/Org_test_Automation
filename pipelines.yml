@@ -19,6 +19,6 @@ pipelines:
             lines: 100
         execution:
           onExecute:
-            - pushd $res_my_git_repo_resourcePath
+            - pushd $res_my_other_git_repo_resourcePath
             - ls -la
             - popd
