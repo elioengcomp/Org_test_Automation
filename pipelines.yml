@@ -2,7 +2,7 @@ resources:
   - name: my_other_git_repo
     type: GitRepo
     configuration:
-      gitProvider: my_github
+      gitProvider: my_new_github
       path: elioengcomp/Org_test_Automation
       branches:
         include: simple-git
