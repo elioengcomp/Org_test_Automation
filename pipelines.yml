@@ -1,5 +1,5 @@
 resources:
-  - name: my_git_repo
+  - name: my_other_git_repo
     type: GitRepo
     configuration:
       gitProvider: my_github
@@ -14,7 +14,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: my_git_repo
+            - name: my_other_git_repo
           environmentVariables:
             lines: 100
         execution:
