@@ -8,9 +8,9 @@ resources:
         include: simple-git
 
 pipelines:
-  - name: my_simple_git_pipeline
+  - name: my_other_simple_git_pipeline
     steps:
-      - name: my_simple_git_step
+      - name: my_other_simple_git_step
         type: Bash
         configuration:
           inputResources:
