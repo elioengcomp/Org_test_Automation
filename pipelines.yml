@@ -1,0 +1,24 @@
+resources:
+  - name: my_git_repo
+    type: GitRepo
+    configuration:
+      gitProvider: my_github
+      path: elioengcomp/Org_test_Automation
+      branches:
+        include: simple-git
+
+pipelines:
+  - name: my_simple_git_pipeline
+    steps:
+      - name: my_simple_git_step
+        type: Bash
+        configuration:
+          inputResources:
+            - name: my_git_repo
+          environmentVariables:
+            lines: 100
+        execution:
+          onExecute:
+            - pushd $res_my_git_repo_resourcePath
+            - ls -la
+            - popd
